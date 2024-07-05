@@ -29,7 +29,12 @@ app.post("/submit", (req, res) => {
     }
 
     if (req.body["deletePost"] == "true") {
+        console.log(req.body["postIndex"]);
         mem.splice(req.body["postIndex"], 1);
+
+        for (var i = 0; i < mem.length; i++) {
+            mem[i][2] = i;
+        }
     }
 
     res.render("index.ejs", {

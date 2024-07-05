@@ -37,7 +37,7 @@
                 <form action="/submit" method="POST">
                     <input type="hidden" name="title" value="">
                     <input type="hidden" name="msg" value="">
-                    <input type="hidden" name="postIndex" value=<% element[3] %>>
+                    <input type="hidden" name="postIndex" value="<%= element[2] %>">
                     <input type="hidden" name="deletePost" value="true">
                     <input type="submit" class="btn btn-warning mb-3" value="Delete Post">
                 </form>
